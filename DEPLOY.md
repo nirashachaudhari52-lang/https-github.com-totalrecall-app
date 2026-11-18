@@ -26,10 +26,9 @@ total-recall-college-site/
 - **College question bank (`/college/`)** – B.Sc Nursing, INC 2021 syllabus, university-style
   descriptive answers (2, 5, 10, 15 marks), previous-year questions (PYQ) marked. Each subject's JSON
   is loaded only when a student opens that subject, so the page stays light on mobile data.
-- **Content in this package:** Semesters I, II and III complete; Semester IV – Pharmacology II,
-  Pathology II + Genetics complete, Adult Health Nursing II units 1–7 of 12 (the page shows
-  "units ready 7 of 12 – more coming soon"); Professionalism (PROF 230) and Semesters V–VIII follow later.
-  See `README.md` for exact counts.
+- **Content in this package:** Semesters I, II, III and IV complete – 18 subjects, 2,172 questions
+  (478 previous-year). Semesters V–VIII follow later as new packages (or pushes to the `college-site`
+  branch); subjects that are not ready yet are simply not listed. See `README.md` for exact counts.
 
 The site needs **no server code, no database and no environment variables**. All paths are absolute
 (`/college/…`), so `public/` must be served at the root of a domain or subdomain.
