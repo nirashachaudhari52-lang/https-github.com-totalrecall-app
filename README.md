@@ -12,9 +12,9 @@ Worker **total-recall** → Settings → Build → Git repository: this repo, pr
 root directory `/`, deploy command `npx wrangler deploy` (no build command needed). Every push to this
 branch deploys automatically. `wrangler.jsonc` serves `./public` as static assets.
 
-## Contents (2026-11-19, data version 412ce8ddac69)
+## Contents (2026-11-19, data version 839a5549ec24)
 
-2055 questions, 460 previous-year questions, 17 subjects.
+2172 questions, 478 previous-year questions, 18 subjects.
 
 | Sem | Code | Subject | Questions | PYQ | Units ready |
 |---|---|---|---|---|---|
@@ -34,7 +34,8 @@ branch deploys automatically. `wrangler.jsonc` serves `./public` as static asset
 | 3 | N-AHN (I) 215 | Adult Health Nursing I with integrated pathophysiology (including BCLS module) | 187 | 50 | 11 of 11 |
 | 4 | PHAR (II) 205 | Pharmacology II (including Fundamentals of Prescribing module) | 92 | 19 | 8 of 8 |
 | 4 | PATH (II) 210 | Pathology II and Genetics | 69 | 17 | 7 of 7 |
-| 4 | N-AHN (II) 225 | Adult Health Nursing II with integrated pathophysiology including Geriatric Nursing (and Palliative Care module) | 125 | 37 | 7 of 12 |
+| 4 | N-AHN (II) 225 | Adult Health Nursing II with integrated pathophysiology including Geriatric Nursing (and Palliative Care module) | 198 | 55 | 12 of 12 |
+| 4 | PROF 230 | Professionalism, Professional Values and Ethics including Bioethics | 44 | 0 | 3 of 3 |
 
 The files in `public/college/data/` are generated from the question-bank sources; edit those sources and
 regenerate rather than editing the JSON by hand.

@@ -1,10 +1,10 @@
 {
  "generated": "2026-11-19",
- "version": "412ce8ddac69",
+ "version": "839a5549ec24",
  "totals": {
-  "questions": 2055,
-  "pyq": 460,
-  "subjects": 17,
+  "questions": 2172,
+  "pyq": 478,
+  "subjects": 18,
   "semesters": [
    1,
    2,
@@ -246,8 +246,8 @@
    },
    "units_ready": 11,
    "units_total": 11,
-   "words": 80242,
-   "bytes": 868600
+   "words": 80344,
+   "bytes": 869267
   },
   {
    "sem": 4,
@@ -287,17 +287,34 @@
    "code": "N-AHN (II) 225",
    "slug": "s4-n-ahn-ii-225",
    "subject": "Adult Health Nursing II with integrated pathophysiology including Geriatric Nursing (and Palliative Care module)",
-   "count": 125,
-   "pyq": 37,
+   "count": 198,
+   "pyq": 55,
    "marks": {
-    "15": 21,
-    "5": 67,
-    "2": 37
+    "15": 34,
+    "5": 106,
+    "2": 58
    },
-   "units_ready": 7,
+   "units_ready": 12,
    "units_total": 12,
-   "words": 67369,
-   "bytes": 710245
+   "words": 106753,
+   "bytes": 1126015
+  },
+  {
+   "sem": 4,
+   "code": "PROF 230",
+   "slug": "s4-prof-230",
+   "subject": "Professionalism, Professional Values and Ethics including Bioethics",
+   "count": 44,
+   "pyq": 0,
+   "marks": {
+    "10": 10,
+    "5": 19,
+    "2": 15
+   },
+   "units_ready": 3,
+   "units_total": 3,
+   "words": 18365,
+   "bytes": 190746
   }
  ]
 }
