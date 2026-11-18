@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B.Sc Nursing Question Bank · Total Recall</title>
+<meta name="description" content="B.Sc Nursing (INC 2021) semester-wise question bank with university-style 2, 5, 10 and 15-mark answers and previous-year questions marked.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Layout: one reading column; a sticky bar picks semester, subject and filters; questions open in place */
+  --paper: #f3f6f8;
+  --card: #ffffff;
+  --ink: #13233a;
+  --muted: #586a7f;
+  --line: #d6dfe8;
+  --accent: #0b6f6c;
+  --accent-soft: #dff0ef;
+  --pyq: #8a1c3b;
+  --pyq-soft: #f7e5eb;
+  --m2: #0b6f6c;
+  --m5: #1f4e8c;
+  --m10: #8a1c3b;
+  --m15: #561129;
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Atkinson Hyperlegible", "Segoe UI", Roboto, system-ui, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0b131c; --card: #121e2b; --ink: #e4ebf3; --muted: #95a6b9; --line: #23364a;
+    --accent: #48c1bc; --accent-soft: #12302f; --pyq: #ea8aa3; --pyq-soft: #3a1a25;
+    --m2: #48c1bc; --m5: #85aee9; --m10: #ea8aa3; --m15: #f3aec0; color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.55; }
+.wrap { max-width: 840px; margin: 0 auto; padding: 0 16px; }
+.topnav { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0 0; font-size: 0.9rem; }
+.topnav a { color: var(--accent); text-decoration: none; font-weight: 700; }
+.topnav a:hover { text-decoration: underline; }
+header.top { padding: 10px 0 8px; }
+header.top h1 { font-family: var(--font-display); font-weight: 700; font-size: 1.6rem; line-height: 1.2; margin: 0; text-wrap: balance; }
+header.top p { margin: 4px 0 0; color: var(--muted); font-size: 0.92rem; }
+.views { display: flex; gap: 8px; margin: 12px 0 0; }
+.views button, .chip, .semtab {
+  font: inherit; cursor: pointer; border: 1px solid var(--line); background: var(--card); color: var(--ink);
+  border-radius: 999px; padding: 6px 14px; font-size: 0.9rem; white-space: nowrap; flex: 0 0 auto;
+}
+.views button[aria-pressed="true"], .chip[aria-pressed="true"], .semtab[aria-pressed="true"] {
+  background: var(--accent); border-color: var(--accent); color: var(--card);
+}
+.semtab[disabled] { opacity: 0.45; cursor: default; }
+button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.bar { position: sticky; top: 0; z-index: 5; background: var(--paper); border-bottom: 1px solid var(--line); padding: 10px 0; }
+.row { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 2px; scrollbar-width: thin; }
+.row + .row { margin-top: 8px; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 8px; }
+.filters select, .filters input[type="search"] {
+  font: inherit; font-size: 0.9rem; color: var(--ink); background: var(--card); border: 1px solid var(--line);
+  border-radius: 8px; padding: 6px 10px; min-width: 0;
+}
+.filters input[type="search"] { flex: 1 1 180px; }
+.filters select { flex: 1 1 200px; max-width: 100%; }
+.toggle { display: inline-flex; align-items: center; gap: 6px; font-size: 0.9rem; color: var(--muted); }
+.summary { color: var(--muted); font-size: 0.88rem; margin: 12px 0 4px; font-variant-numeric: tabular-nums; }
+.paperline { font-size: 0.88rem; color: var(--muted); margin: 2px 0 0; }
+.paperline .soon { color: var(--pyq); font-weight: 700; }
+h2.unit { font-family: var(--font-display); font-weight: 600; font-size: 1.12rem; margin: 22px 0 8px; text-wrap: balance; }
+h2.unit small { display: block; font-family: var(--font-body); font-weight: 400; font-size: 0.82rem; color: var(--muted); }
+.list { display: grid; gap: 10px; padding-bottom: 40px; }
+article.q { background: var(--card); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.q-head { all: unset; box-sizing: border-box; display: grid; grid-template-columns: auto 1fr; gap: 6px 12px; width: 100%; padding: 12px 14px; cursor: pointer; }
+.q-head:focus-visible { outline: 3px solid var(--accent); outline-offset: -3px; }
+.badge { grid-row: span 2; align-self: start; font-weight: 700; font-size: 0.78rem; border-radius: 6px; padding: 3px 7px; color: var(--card); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.badge.m2 { background: var(--m2); } .badge.m5 { background: var(--m5); } .badge.m10 { background: var(--m10); } .badge.m15 { background: var(--m15); }
+.q-text { font-weight: 700; }
+.q-meta { display: flex; flex-wrap: wrap; gap: 6px; font-size: 0.78rem; color: var(--muted); }
+.pyq-tag { background: var(--pyq-soft); color: var(--pyq); border-radius: 4px; padding: 1px 6px; font-weight: 700; }
+.fig-tag { background: var(--accent-soft); color: var(--accent); border-radius: 4px; padding: 1px 6px; }
+.q-body { border-top: 1px solid var(--line); padding: 4px 16px 16px; }
+.answer { max-width: 68ch; }
+.answer h3, .answer h4 { font-size: 1rem; margin: 14px 0 4px; }
+.answer p { margin: 8px 0; }
+.answer ul, .answer ol { margin: 6px 0; padding-left: 22px; }
+.answer li { margin: 3px 0; }
+.answer strong { color: var(--ink); }
+.answer .tbl { overflow-x: auto; margin: 10px 0; }
+.answer table { border-collapse: collapse; font-size: 0.9rem; min-width: 100%; }
+.answer th, .answer td { border: 1px solid var(--line); padding: 6px 8px; text-align: left; vertical-align: top; }
+.answer th { background: var(--accent-soft); }
+.figure { border: 2px dashed var(--line); border-radius: 10px; padding: 10px 12px; margin: 12px 0; font-size: 0.88rem; }
+.figure b { color: var(--accent); }
+.figure .labels { color: var(--muted); }
+.figure img, .figure svg { max-width: 100%; display: block; margin: 0 auto 6px; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.actions button { font: inherit; font-size: 0.85rem; border: 1px solid var(--line); background: var(--paper); color: var(--ink); border-radius: 8px; padding: 5px 12px; cursor: pointer; }
+.empty { color: var(--muted); padding: 24px 0; }
+.about section { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; margin: 14px 0; }
+.about h2 { font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; margin: 0 0 8px; }
+.about h3 { font-size: 1rem; margin: 14px 0 6px; }
+.about .tbl { overflow-x: auto; }
+.about table { border-collapse: collapse; width: 100%; font-size: 0.86rem; }
+.about th, .about td { border-bottom: 1px solid var(--line); padding: 6px 6px; text-align: left; vertical-align: top; }
+.about td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.pill { display: inline-block; font-size: 0.72rem; font-weight: 700; border-radius: 999px; padding: 1px 8px; }
+.pill.univ { background: var(--accent-soft); color: var(--accent); }
+.pill.coll { background: var(--pyq-soft); color: var(--pyq); }
+.pill.int { border: 1px solid var(--line); color: var(--muted); }
+.pill.done { background: var(--accent); color: var(--card); }
+.pill.part { border: 1px solid var(--accent); color: var(--accent); }
+footer.foot { color: var(--muted); font-size: 0.8rem; padding: 8px 0 28px; }
+footer.foot a { color: var(--accent); }
+@media (prefers-reduced-motion: no-preference) { article.q { transition: border-color .15s; } }
+@media (max-width: 420px) { header.top h1 { font-size: 1.35rem; } .q-head { padding: 12px; } .q-body { padding: 4px 12px 14px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="topnav" aria-label="Site">
+    <a href="/">‹ Start page</a>
+    <a href="https://totalrecallofficial.com" rel="noopener">Competitive exams ↗</a>
+  </nav>
+  <header class="top">
+    <h1>B.Sc Nursing Question Bank</h1>
+    <p>INC revised curriculum (2021) · university and college exam pattern · descriptive answers by marks</p>
+    <div class="views" role="group" aria-label="View">
+      <button type="button" id="view-bank" aria-pressed="true">Questions</button>
+      <button type="button" id="view-about" aria-pressed="false">Syllabus &amp; pattern</button>
+    </div>
+  </header>
+</div>
+<div class="bar" id="bar">
+  <div class="wrap">
+    <div class="row" id="sems" role="group" aria-label="Semester"></div>
+    <div class="row" id="subjects" role="group" aria-label="Subject"></div>
+    <div class="filters">
+      <select id="unit" aria-label="Unit"></select>
+      <div class="row" id="marks" role="group" aria-label="Marks" style="padding:0"></div>
+      <label class="toggle" for="pyq"><input type="checkbox" id="pyq"> Previous-year only</label>
+      <input type="search" id="search" placeholder="Search questions" aria-label="Search questions">
+    </div>
+  </div>
+</div>
+<main class="wrap">
+  <div id="bank">
+    <p class="summary" id="summary">Loading the question bank…</p>
+    <p class="paperline" id="paperline"></p>
+    <div class="list" id="list"></div>
+  </div>
+  <div id="about" class="about" hidden></div>
+</main>
+<footer class="wrap foot" id="foot"></footer>
+<script>
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const DATA_URL = "/college/data/";
+let INDEX = null, SYL = null;
+const CACHE = new Map();
+const state = { view: "bank", sem: 1, subject: null, unit: "all", marks: "all", pyq: false, q: "", open: null };
+try { Object.assign(state, JSON.parse(localStorage.getItem("bsn-qb-state") || "{}"), { view: "bank", open: null, q: "" }); } catch (e) {}
+function save() { try { localStorage.setItem("bsn-qb-state", JSON.stringify({ sem: state.sem, subject: state.subject, marks: state.marks, pyq: state.pyq })); } catch (e) {} }
+
+function pyqLabel(code) {
+  return code.replace("MAHE", "Manipal").replace("-Supp", " suppl.").replace(/-?(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)(\d{4})/, " $1 $2").replace(/-(\d{4})/, " $1");
+}
+const semsWithData = () => [...new Set(INDEX.courses.map((c) => c.sem))];
+const subjectsFor = (sem) => INDEX.courses.filter((c) => c.sem === sem);
+const courseMeta = (code) => INDEX.courses.find((c) => c.code === code) || null;
+function courseInfo(code) {
+  for (const s of SYL.semesters) for (const c of s.courses) if (c.code === code) return c;
+  return null;
+}
+function currentPool() { const m = courseMeta(state.subject); return (m && CACHE.get(m.slug)) || []; }
+async function ensureCourse(m) {
+  if (CACHE.has(m.slug)) return CACHE.get(m.slug);
+  const r = await fetch(`${DATA_URL}${m.slug}.json?v=${encodeURIComponent(INDEX.version)}`);
+  if (!r.ok) throw new Error("HTTP " + r.status);
+  const qs = await r.json();
+  CACHE.set(m.slug, qs);
+  return qs;
+}
+function setHash() {
+  const m = courseMeta(state.subject);
+  if (!m) return;
+  const h = "#" + m.slug + (state.open ? "/" + state.open : "");
+  if (location.hash !== h) { try { history.replaceState(null, "", h); } catch (e) {} }
+}
+function readHash() {
+  const [slug, qid] = decodeURIComponent(location.hash.replace(/^#/, "")).split("/");
+  const m = INDEX.courses.find((c) => c.slug === slug);
+  if (!m) return null;
+  state.sem = m.sem; state.subject = m.code; state.unit = "all";
+  return qid || null;
+}
+function renderSems() {
+  const have = semsWithData();
+  if (!have.includes(state.sem)) state.sem = have[0];
+  $("sems").innerHTML = SYL.semesters.map((s) => {
+    const has = have.includes(s.semester);
+    return `<button type="button" class="semtab" data-sem="${s.semester}" aria-pressed="${s.semester === state.sem}" ${has ? "" : "disabled title=\"Coming next\""}>Sem ${s.semester}${has ? "" : " · soon"}</button>`;
+  }).join("");
+}
+function renderSubjects() {
+  const subs = subjectsFor(state.sem);
+  if (!subs.find((c) => c.code === state.subject)) state.subject = subs.length ? subs[0].code : null;
+  $("subjects").innerHTML = subs.map((c) =>
+    `<button type="button" class="chip" data-code="${esc(c.code)}" aria-pressed="${c.code === state.subject}">${esc(c.subject)}</button>`).join("");
+}
+function renderFilters() {
+  const pool = currentPool();
+  const units = [...new Map(pool.map((q) => [q.unit_no, q.unit_title])).entries()].sort((a, b) => a[0] - b[0]);
+  if (state.unit !== "all" && !units.find(([n]) => String(n) === String(state.unit))) state.unit = "all";
+  $("unit").innerHTML = `<option value="all">All units (${units.length})</option>` +
+    units.map(([n, t]) => `<option value="${n}" ${String(n) === String(state.unit) ? "selected" : ""}>Unit ${n}: ${esc(t)}</option>`).join("");
+  const marks = [...new Set(pool.map((q) => q.marks))].sort((a, b) => a - b);
+  if (state.marks !== "all" && !marks.includes(Number(state.marks))) state.marks = "all";
+  $("marks").innerHTML = [["all", "All marks"], ...marks.map((m) => [String(m), m + " marks"])].map(([v, l]) =>
+    `<button type="button" class="chip" data-marks="${v}" aria-pressed="${String(state.marks) === v}">${l}</button>`).join("");
+  $("pyq").checked = !!state.pyq;
+}
+function filtered() {
+  const term = state.q.trim().toLowerCase();
+  return currentPool().filter((q) =>
+    (state.unit === "all" || String(q.unit_no) === String(state.unit)) &&
+    (state.marks === "all" || String(q.marks) === String(state.marks)) &&
+    (!state.pyq || q.is_pyq) &&
+    (!term || (q.question + " " + q.tags.join(" ") + " " + q.unit_title).toLowerCase().includes(term)));
+}
+function figureHtml(d) {
+  if (!d) return "";
+  if (d.svg) return `<figure class="figure">${d.svg}<b>Fig.</b> ${esc(d.caption)}</figure>`;
+  return `<div class="figure"><b>Diagram:</b> ${esc(d.caption)}<div class="labels">Labels: ${esc(d.labels.join(", "))}</div></div>`;
+}
+function wrapTables(html) { return html.replace(/<table>/g, '<div class="tbl"><table>').replace(/<\/table>/g, "</table></div>"); }
+function renderList() {
+  const items = filtered();
+  const pool = currentPool();
+  const by = (m) => items.filter((q) => q.marks === m).length;
+  const ms = [...new Set(pool.map((q) => q.marks))].sort((a, b) => a - b);
+  $("summary").textContent = `${items.length} of ${pool.length} questions · ${items.filter((q) => q.is_pyq).length} previous-year · ` +
+    ms.map((m) => `${m}-mark ${by(m)}`).join(" · ");
+  const ci = courseInfo(state.subject), m = courseMeta(state.subject);
+  const partial = m && m.units_ready < m.units_total;
+  $("paperline").innerHTML = ci ? `${esc(ci.code)} · ${esc(ci.paper)} · ${esc(ci.exam)} exam` +
+    (partial ? ` · <span class="soon">units ready ${m.units_ready} of ${m.units_total} – more coming soon</span>` : "") : "";
+  if (!items.length) { $("list").innerHTML = '<p class="empty">No questions match these filters. Clear the search or choose "All marks".</p>'; return; }
+  let html = "", lastUnit = null;
+  items.forEach((q) => {
+    if (q.unit_no !== lastUnit) {
+      const n = pool.filter((x) => x.unit_no === q.unit_no).length;
+      html += `<h2 class="unit">Unit ${q.unit_no}: ${esc(q.unit_title)}<small>${n} questions in this unit</small></h2>`;
+      lastUnit = q.unit_no;
+    }
+    const open = state.open === q.id;
+    html += `<article class="q" id="${q.id}">
+      <button type="button" class="q-head" aria-expanded="${open}" data-id="${q.id}">
+        <span class="badge m${q.marks}">${q.marks} marks</span>
+        <span class="q-text">${esc(q.question)}</span>
+        <span class="q-meta">${q.pyq_sources.map((s) => `<span class="pyq-tag">PYQ ${esc(pyqLabel(s))}</span>`).join("")}${q.diagram ? '<span class="fig-tag">diagram</span>' : ""}<span>${q.word_count} words</span></span>
+      </button>
+      <div class="q-body" ${open ? "" : "hidden"}>${open ? bodyHtml(q) : ""}</div>
+    </article>`;
+  });
+  $("list").innerHTML = html;
+}
+function bodyHtml(q) {
+  return `<div class="answer">${figureHtml(q.diagram)}${wrapTables(q.answer_html)}</div>
+    <div class="actions"><button type="button" data-copy="${q.id}">Copy answer</button><button type="button" data-link="${q.id}">Copy link</button><span class="q-meta" style="align-self:center">${q.id}</span></div>`;
+}
+function toggle(id, scroll) {
+  const art = document.getElementById(id);
+  if (!art) return;
+  const q = currentPool().find((x) => x.id === id);
+  const body = art.querySelector(".q-body"), head = art.querySelector(".q-head");
+  const open = body.hidden;
+  if (open) { body.innerHTML = bodyHtml(q); body.hidden = false; head.setAttribute("aria-expanded", "true"); state.open = id; }
+  else { body.hidden = true; head.setAttribute("aria-expanded", "false"); state.open = null; }
+  setHash();
+  if (open && scroll) art.scrollIntoView({ block: "start" });
+}
+function renderAbout() {
+  const pat = SYL.paper_patterns;
+  const patternTable = (blocks) => `<div class="tbl"><table><tr><th>Question type</th><th>Number</th><th>Marks each</th><th>Total</th></tr>${blocks.map((b) =>
+    `<tr><td>${esc(b.type)}</td><td class="num">${b.count}</td><td class="num">${b.marks_each}</td><td class="num">${b.total}</td></tr>`).join("")}</table></div>`;
+  let h = `<section><h2>How the papers are set</h2><p>${esc(SYL.curriculum)}.</p><p>${esc(SYL.pattern_note)}</p>
+    <h3>${esc(pat.U75.label)}</h3>${patternTable(pat.U75.blocks)}
+    <h3>${esc(pat.U37_38.label)}</h3>${Object.entries(pat.U37_38.sections).map(([k, v]) => `<p><b>Section ${esc(k)}</b></p>${patternTable(v)}`).join("")}
+    <h3>${esc(pat.C50.label)}</h3>${patternTable(pat.C50.blocks)}
+    <h3>Other split papers</h3>${["U25_50", "U38_25_12", "U55_20"].filter((k) => pat[k]).map((k) => `<p><b>${esc(pat[k].label)}</b></p>${Object.entries(pat[k].sections).map(([s, v]) => `<p>${esc(s)}</p>${patternTable(v)}`).join("")}`).join("")}
+  </section>`;
+  h += `<section><h2>Courses by semester</h2>`;
+  const have = semsWithData();
+  SYL.semesters.forEach((s) => {
+    const done = have.includes(s.semester);
+    const part = done && subjectsFor(s.semester).some((c) => c.units_ready < c.units_total) || (done && subjectsFor(s.semester).length < s.courses.filter((c) => c.answer_marks && c.answer_marks.length).length);
+    h += `<h3>Semester ${s.semester} (Year ${s.year}) ${done ? (part ? '<span class="pill part">answers in progress</span>' : '<span class="pill done">answers ready</span>') : ""}</h3><div class="tbl"><table>
+      <tr><th>Code</th><th>Course</th><th>Theory</th><th>Exam</th><th>Answers by marks</th></tr>` +
+      s.courses.map((c) => {
+        const kind = /^University/.test(c.exam) ? "univ" : /^College/.test(c.exam) ? "coll" : "int";
+        const th = c.theory_hours ? `${c.theory_credits} cr · ${c.theory_hours} h` : (c.theory_credits ? `${c.theory_credits} cr` : "–");
+        return `<tr><td class="num">${esc(c.code)}</td><td>${esc(c.title)}${c.paper ? `<br><small>${esc(c.paper)}</small>` : ""}</td><td class="num">${th}</td>
+          <td><span class="pill ${kind}">${esc(c.exam.split(";")[0])}</span></td><td class="num">${c.answer_marks.length ? c.answer_marks.join(" / ") : "–"}</td></tr>`;
+      }).join("") + `</table></div>`;
+  });
+  h += `</section><section><h2>Previous-year papers reviewed</h2><ul>` +
+    SYL.pyq_sources_reviewed.map((p) => `<li><b>${esc(p.name)}</b> (${esc(p.code)}): ${esc(p.papers)}</li>`).join("") +
+    `</ul><p>Questions marked PYQ were asked in at least one of these papers. The rest cover syllabus topics that the papers did not reach, so every unit has 2, 5 and essay-mark answers.</p></section>`;
+  $("about").innerHTML = h;
+}
+let renderToken = 0;
+async function renderAll(openId) {
+  renderSems(); renderSubjects(); save();
+  const m = courseMeta(state.subject);
+  if (!m) { $("list").innerHTML = '<p class="empty">No subjects in this semester yet.</p>'; return; }
+  const token = ++renderToken;
+  if (!CACHE.has(m.slug)) {
+    $("summary").textContent = `Loading ${m.subject}…`; $("paperline").textContent = ""; $("list").innerHTML = "";
+    $("unit").innerHTML = ""; $("marks").innerHTML = "";
+    try { await ensureCourse(m); }
+    catch (e) { if (token === renderToken) { $("summary").textContent = ""; $("list").innerHTML = '<p class="empty">Could not load this subject. Check your internet connection and tap the subject again.</p>'; } return; }
+    if (token !== renderToken) return;
+  }
+  renderFilters(); renderList();
+  if (openId && document.getElementById(openId)) toggle(openId, true); else setHash();
+}
+
+$("sems").addEventListener("click", (e) => { const b = e.target.closest("[data-sem]"); if (!b || b.disabled) return; state.sem = Number(b.dataset.sem); state.subject = null; state.unit = "all"; state.open = null; renderAll(); });
+$("subjects").addEventListener("click", (e) => { const b = e.target.closest("[data-code]"); if (!b) return; state.subject = b.dataset.code; state.unit = "all"; state.open = null; renderAll(); });
+$("marks").addEventListener("click", (e) => { const b = e.target.closest("[data-marks]"); if (!b) return; state.marks = b.dataset.marks; renderFilters(); renderList(); save(); });
+$("unit").addEventListener("change", (e) => { state.unit = e.target.value; renderList(); });
+$("pyq").addEventListener("change", (e) => { state.pyq = e.target.checked; renderList(); save(); });
+$("search").addEventListener("input", (e) => { state.q = e.target.value; renderList(); });
+$("list").addEventListener("click", async (e) => {
+  const head = e.target.closest(".q-head");
+  if (head) { toggle(head.dataset.id); return; }
+  const cp = e.target.closest("[data-copy]");
+  if (cp) {
+    const q = currentPool().find((x) => x.id === cp.dataset.copy);
+    const tmp = document.createElement("div"); tmp.innerHTML = q.answer_html;
+    try { await navigator.clipboard.writeText(`${q.question} (${q.marks} marks)\n\n${tmp.innerText}`); cp.textContent = "Copied"; }
+    catch (err) { cp.textContent = "Copy not allowed here"; }
+    setTimeout(() => { cp.textContent = "Copy answer"; }, 1600);
+  }
+  const ln = e.target.closest("[data-link]");
+  if (ln) {
+    try { await navigator.clipboard.writeText(location.href); ln.textContent = "Link copied"; }
+    catch (err) { ln.textContent = "Copy not allowed here"; }
+    setTimeout(() => { ln.textContent = "Copy link"; }, 1600);
+  }
+});
+function setView(v) {
+  state.view = v;
+  $("view-bank").setAttribute("aria-pressed", v === "bank"); $("view-about").setAttribute("aria-pressed", v === "about");
+  $("bank").hidden = v !== "bank"; $("bar").hidden = v !== "bank"; $("about").hidden = v !== "about";
+  if (v === "about") renderAbout();
+}
+$("view-bank").addEventListener("click", () => setView("bank"));
+$("view-about").addEventListener("click", () => setView("about"));
+window.addEventListener("hashchange", () => { if (!INDEX) return; const qid = readHash(); state.open = null; renderAll(qid); });
+
+(async function init() {
+  try {
+    const [ix, syl] = await Promise.all([
+      fetch(DATA_URL + "index.json", { cache: "no-cache" }).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }),
+      fetch(DATA_URL + "syllabus.json").then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }),
+    ]);
+    INDEX = ix; SYL = syl;
+  } catch (e) {
+    $("summary").textContent = "Could not load the question bank. Please check your internet connection and refresh the page.";
+    return;
+  }
+  $("foot").innerHTML = `${INDEX.totals.questions.toLocaleString("en-IN")} questions · ${INDEX.totals.pyq.toLocaleString("en-IN")} previous-year · updated ${esc(INDEX.generated)} · <a href="/">Start page</a>`;
+  const qid = readHash();
+  await renderAll(qid);
+  if (!qid) { const f = filtered()[0]; if (f && !state.open) toggle(f.id); }
+})();
+</script>
+</body>
+</html>

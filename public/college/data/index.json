@@ -1,0 +1,303 @@
+{
+ "generated": "2026-11-19",
+ "version": "3d9f34e5c0eb",
+ "totals": {
+  "questions": 2040,
+  "pyq": 456,
+  "subjects": 17,
+  "semesters": [
+   1,
+   2,
+   3,
+   4
+  ]
+ },
+ "courses": [
+  {
+   "sem": 1,
+   "code": "ENGL 101",
+   "slug": "s1-engl-101",
+   "subject": "Communicative English",
+   "count": 80,
+   "pyq": 0,
+   "marks": {
+    "2": 33,
+    "5": 38,
+    "10": 9
+   },
+   "units_ready": 7,
+   "units_total": 7,
+   "words": 22062,
+   "bytes": 235968
+  },
+  {
+   "sem": 1,
+   "code": "ANAT 105",
+   "slug": "s1-anat-105",
+   "subject": "Applied Anatomy",
+   "count": 212,
+   "pyq": 32,
+   "marks": {
+    "2": 98,
+    "5": 91,
+    "10": 23
+   },
+   "units_ready": 10,
+   "units_total": 10,
+   "words": 60360,
+   "bytes": 674565
+  },
+  {
+   "sem": 1,
+   "code": "PHYS 110",
+   "slug": "s1-phys-110",
+   "subject": "Applied Physiology",
+   "count": 181,
+   "pyq": 30,
+   "marks": {
+    "2": 89,
+    "5": 74,
+    "10": 18
+   },
+   "units_ready": 11,
+   "units_total": 11,
+   "words": 50731,
+   "bytes": 571520
+  },
+  {
+   "sem": 1,
+   "code": "SOCI 115",
+   "slug": "s1-soci-115",
+   "subject": "Applied Sociology",
+   "count": 78,
+   "pyq": 21,
+   "marks": {
+    "2": 36,
+    "5": 32,
+    "10": 10
+   },
+   "units_ready": 7,
+   "units_total": 7,
+   "words": 21513,
+   "bytes": 236108
+  },
+  {
+   "sem": 1,
+   "code": "PSYC 120",
+   "slug": "s1-psyc-120",
+   "subject": "Applied Psychology",
+   "count": 98,
+   "pyq": 21,
+   "marks": {
+    "2": 40,
+    "5": 43,
+    "10": 15
+   },
+   "units_ready": 10,
+   "units_total": 10,
+   "words": 30857,
+   "bytes": 348993
+  },
+  {
+   "sem": 1,
+   "code": "N-NF (I) 125",
+   "slug": "s1-n-nf-i-125",
+   "subject": "Nursing Foundation I (including First Aid module)",
+   "count": 147,
+   "pyq": 28,
+   "marks": {
+    "2": 62,
+    "5": 67,
+    "15": 18
+   },
+   "units_ready": 14,
+   "units_total": 14,
+   "words": 52493,
+   "bytes": 560436
+  },
+  {
+   "sem": 2,
+   "code": "BIOC 135",
+   "slug": "s2-bioc-135",
+   "subject": "Applied Biochemistry",
+   "count": 91,
+   "pyq": 23,
+   "marks": {
+    "2": 52,
+    "5": 39
+   },
+   "units_ready": 8,
+   "units_total": 8,
+   "words": 20649,
+   "bytes": 260619
+  },
+  {
+   "sem": 2,
+   "code": "NUTR 140",
+   "slug": "s2-nutr-140",
+   "subject": "Applied Nutrition and Dietetics",
+   "count": 145,
+   "pyq": 49,
+   "marks": {
+    "10": 14,
+    "5": 66,
+    "2": 65
+   },
+   "units_ready": 13,
+   "units_total": 13,
+   "words": 45503,
+   "bytes": 518001
+  },
+  {
+   "sem": 2,
+   "code": "N-NF (II) 125",
+   "slug": "s2-n-nf-ii-125",
+   "subject": "Nursing Foundation II (including Health Assessment module)",
+   "count": 185,
+   "pyq": 30,
+   "marks": {
+    "15": 30,
+    "5": 81,
+    "2": 74
+   },
+   "units_ready": 16,
+   "units_total": 16,
+   "words": 74261,
+   "bytes": 799302
+  },
+  {
+   "sem": 2,
+   "code": "HNIT 145",
+   "slug": "s2-hnit-145",
+   "subject": "Health/Nursing Informatics and Technology",
+   "count": 94,
+   "pyq": 0,
+   "marks": {
+    "10": 18,
+    "5": 31,
+    "2": 45
+   },
+   "units_ready": 10,
+   "units_total": 10,
+   "words": 28422,
+   "bytes": 316760
+  },
+  {
+   "sem": 3,
+   "code": "MICR 201",
+   "slug": "s3-micr-201",
+   "subject": "Applied Microbiology and Infection Control including Safety",
+   "count": 145,
+   "pyq": 61,
+   "marks": {
+    "10": 28,
+    "5": 65,
+    "2": 52
+   },
+   "units_ready": 15,
+   "units_total": 15,
+   "words": 54202,
+   "bytes": 578561
+  },
+  {
+   "sem": 3,
+   "code": "PHAR (I) 205",
+   "slug": "s3-phar-i-205",
+   "subject": "Pharmacology I",
+   "count": 70,
+   "pyq": 23,
+   "marks": {
+    "10": 19,
+    "5": 32,
+    "2": 19
+   },
+   "units_ready": 8,
+   "units_total": 8,
+   "words": 30108,
+   "bytes": 341679
+  },
+  {
+   "sem": 3,
+   "code": "PATH (I) 210",
+   "slug": "s3-path-i-210",
+   "subject": "Pathology I",
+   "count": 56,
+   "pyq": 19,
+   "marks": {
+    "5": 38,
+    "2": 18
+   },
+   "units_ready": 3,
+   "units_total": 3,
+   "words": 16706,
+   "bytes": 194677
+  },
+  {
+   "sem": 3,
+   "code": "N-AHN (I) 215",
+   "slug": "s3-n-ahn-i-215",
+   "subject": "Adult Health Nursing I with integrated pathophysiology (including BCLS module)",
+   "count": 187,
+   "pyq": 50,
+   "marks": {
+    "15": 29,
+    "5": 85,
+    "2": 73
+   },
+   "units_ready": 11,
+   "units_total": 11,
+   "words": 80242,
+   "bytes": 868600
+  },
+  {
+   "sem": 4,
+   "code": "PHAR (II) 205",
+   "slug": "s4-phar-ii-205",
+   "subject": "Pharmacology II (including Fundamentals of Prescribing module)",
+   "count": 92,
+   "pyq": 19,
+   "marks": {
+    "10": 20,
+    "5": 43,
+    "2": 29
+   },
+   "units_ready": 8,
+   "units_total": 8,
+   "words": 39366,
+   "bytes": 437662
+  },
+  {
+   "sem": 4,
+   "code": "PATH (II) 210",
+   "slug": "s4-path-ii-210",
+   "subject": "Pathology II and Genetics",
+   "count": 69,
+   "pyq": 17,
+   "marks": {
+    "5": 42,
+    "2": 27
+   },
+   "units_ready": 7,
+   "units_total": 7,
+   "words": 20692,
+   "bytes": 248992
+  },
+  {
+   "sem": 4,
+   "code": "N-AHN (II) 225",
+   "slug": "s4-n-ahn-ii-225",
+   "subject": "Adult Health Nursing II with integrated pathophysiology including Geriatric Nursing (and Palliative Care module)",
+   "count": 110,
+   "pyq": 33,
+   "marks": {
+    "15": 20,
+    "5": 58,
+    "2": 32
+   },
+   "units_ready": 6,
+   "units_total": 12,
+   "words": 61188,
+   "bytes": 644829
+  }
+ ]
+}
