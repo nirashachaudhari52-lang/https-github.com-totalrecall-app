@@ -1,9 +1,9 @@
 {
  "generated": "2026-11-19",
- "version": "3d9f34e5c0eb",
+ "version": "412ce8ddac69",
  "totals": {
-  "questions": 2040,
-  "pyq": 456,
+  "questions": 2055,
+  "pyq": 460,
   "subjects": 17,
   "semesters": [
    1,
@@ -197,7 +197,7 @@
    "units_ready": 15,
    "units_total": 15,
    "words": 54202,
-   "bytes": 578561
+   "bytes": 578580
   },
   {
    "sem": 3,
@@ -287,17 +287,17 @@
    "code": "N-AHN (II) 225",
    "slug": "s4-n-ahn-ii-225",
    "subject": "Adult Health Nursing II with integrated pathophysiology including Geriatric Nursing (and Palliative Care module)",
-   "count": 110,
-   "pyq": 33,
+   "count": 125,
+   "pyq": 37,
    "marks": {
-    "15": 20,
-    "5": 58,
-    "2": 32
+    "15": 21,
+    "5": 67,
+    "2": 37
    },
-   "units_ready": 6,
+   "units_ready": 7,
    "units_total": 12,
-   "words": 61188,
-   "bytes": 644829
+   "words": 67369,
+   "bytes": 710245
   }
  ]
 }

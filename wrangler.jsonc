@@ -1,7 +1,6 @@
 {
   // Cloudflare Worker "total-recall": static site only (start page + B.Sc college question bank).
   // Deployed by Cloudflare Workers Builds on every push to the college-site branch.
-  "$schema": "https://unpkg.com/wrangler/config-schema.json",
   "name": "total-recall",
   "compatibility_date": "2025-11-01",
   "assets": {
