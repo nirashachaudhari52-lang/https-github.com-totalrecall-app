@@ -12,9 +12,9 @@ Worker **total-recall** → Settings → Build → Git repository: this repo, pr
 root directory `/`, deploy command `npx wrangler deploy` (no build command needed). Every push to this
 branch deploys automatically. `wrangler.jsonc` serves `./public` as static assets.
 
-## Contents (2026-11-19, data version 73fc8ead15c0)
+## Contents (2026-11-25, data version 19db2a61dd38)
 
-2603 questions, 544 previous-year questions, 23 subjects.
+2981 questions, 570 previous-year questions, 27 subjects.
 
 | Sem | Code | Subject | Questions | PYQ | Units ready |
 |---|---|---|---|---|---|
@@ -26,7 +26,7 @@ branch deploys automatically. `wrangler.jsonc` serves `./public` as static asset
 | 1 | N-NF (I) 125 | Nursing Foundation I (including First Aid module) | 147 | 30 | 14 of 14 |
 | 2 | BIOC 135 | Applied Biochemistry | 91 | 23 | 8 of 8 |
 | 2 | NUTR 140 | Applied Nutrition and Dietetics | 145 | 50 | 13 of 13 |
-| 2 | N-NF (II) 125 | Nursing Foundation II (including Health Assessment module) | 185 | 31 | 16 of 16 |
+| 2 | N-NF (II) 125 | Nursing Foundation II (including Health Assessment module) | 185 | 32 | 16 of 16 |
 | 2 | HNIT 145 | Health/Nursing Informatics and Technology | 94 | 0 | 10 of 10 |
 | 3 | MICR 201 | Applied Microbiology and Infection Control including Safety | 145 | 61 | 15 of 15 |
 | 3 | PHAR (I) 205 | Pharmacology I | 70 | 23 | 8 of 8 |
@@ -37,10 +37,14 @@ branch deploys automatically. `wrangler.jsonc` serves `./public` as static asset
 | 4 | N-AHN (II) 225 | Adult Health Nursing II with integrated pathophysiology including Geriatric Nursing (and Palliative Care module) | 198 | 55 | 12 of 12 |
 | 4 | PROF 230 | Professionalism, Professional Values and Ethics including Bioethics | 44 | 0 | 3 of 3 |
 | 5 | N-CHN (I) 301 | Child Health Nursing I (including ENBC, FBNC, IMNCI and PLS modules) | 109 | 8 | 6 of 6 |
-| 5 | N-MHN (I) 305 | Mental Health Nursing I | 94 | 6 | 8 of 8 |
+| 5 | N-MHN (I) 305 | Mental Health Nursing I | 95 | 13 | 8 of 8 |
 | 5 | N-COMH (I) 310 | Community Health Nursing I including Environmental Science & Epidemiology | 120 | 22 | 11 of 11 |
 | 5 | EDUC 315 | Educational Technology / Nursing Education | 78 | 23 | 8 of 8 |
-| 5 | N-FORN 320 | Introduction to Forensic Nursing and Indian Laws | 30 | 0 | 5 of 5 |
+| 5 | N-FORN 320 | Introduction to Forensic Nursing and Indian Laws | 30 | 1 | 5 of 5 |
+| 6 | N-CHN (II) 301 | Child Health Nursing II | 95 | 2 | 3 of 3 |
+| 6 | N-MHN (II) 305 | Mental Health Nursing II | 75 | 15 | 7 of 7 |
+| 6 | NMLE 330 | Nursing Management and Leadership | 114 | 0 | 18 of 18 |
+| 6 | N-MIDW (I)/OBGN 335 | Midwifery/Obstetrics and Gynaecology (OBG) Nursing I (including SBA module) | 93 | 0 | 7 of 7 |
 
 The files in `public/college/data/` are generated from the question-bank sources; edit those sources and
 regenerate rather than editing the JSON by hand.

@@ -246,7 +246,7 @@ function renderList() {
     ms.map((m) => `${m}-mark ${by(m)}`).join(" · ");
   const ci = courseInfo(state.subject), m = courseMeta(state.subject);
   const partial = m && m.units_ready < m.units_total;
-  $("paperline").innerHTML = ci ? `${esc(ci.code)} · ${esc(ci.paper)} · ${esc(ci.exam)} exam` +
+  $("paperline").innerHTML = ci ? `${esc(ci.code)} · ${esc(ci.paper)} · ${esc(ci.exam)}${/exam/i.test(ci.exam) ? "" : " exam"}` +
     (partial ? ` · <span class="soon">units ready ${m.units_ready} of ${m.units_total} – more coming soon</span>` : "") : "";
   if (!items.length) { $("list").innerHTML = '<p class="empty">No questions match these filters. Clear the search or choose "All marks".</p>'; return; }
   let html = "", lastUnit = null;

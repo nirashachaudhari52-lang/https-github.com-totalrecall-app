@@ -1,16 +1,17 @@
 {
- "generated": "2026-11-19",
- "version": "73fc8ead15c0",
+ "generated": "2026-11-25",
+ "version": "19db2a61dd38",
  "totals": {
-  "questions": 2603,
-  "pyq": 544,
-  "subjects": 23,
+  "questions": 2981,
+  "pyq": 570,
+  "subjects": 27,
   "semesters": [
    1,
    2,
    3,
    4,
-   5
+   5,
+   6
   ]
  },
  "courses": [
@@ -147,7 +148,7 @@
    "units_ready": 13,
    "units_total": 13,
    "words": 45503,
-   "bytes": 518017
+   "bytes": 518027
   },
   {
    "sem": 2,
@@ -155,7 +156,7 @@
    "slug": "s2-n-nf-ii-125",
    "subject": "Nursing Foundation II (including Health Assessment module)",
    "count": 185,
-   "pyq": 31,
+   "pyq": 32,
    "marks": {
     "15": 30,
     "5": 81,
@@ -164,7 +165,7 @@
    "units_ready": 16,
    "units_total": 16,
    "words": 74261,
-   "bytes": 799318
+   "bytes": 799326
   },
   {
    "sem": 2,
@@ -265,7 +266,7 @@
    "units_ready": 8,
    "units_total": 8,
    "words": 39366,
-   "bytes": 437670
+   "bytes": 437689
   },
   {
    "sem": 4,
@@ -339,17 +340,17 @@
    "code": "N-MHN (I) 305",
    "slug": "s5-n-mhn-i-305",
    "subject": "Mental Health Nursing I",
-   "count": 94,
-   "pyq": 6,
+   "count": 95,
+   "pyq": 13,
    "marks": {
     "15": 15,
     "5": 39,
-    "2": 40
+    "2": 41
    },
    "units_ready": 8,
    "units_total": 8,
-   "words": 37729,
-   "bytes": 426256
+   "words": 37893,
+   "bytes": 428373
   },
   {
    "sem": 5,
@@ -391,7 +392,7 @@
    "slug": "s5-n-forn-320",
    "subject": "Introduction to Forensic Nursing and Indian Laws",
    "count": 30,
-   "pyq": 0,
+   "pyq": 1,
    "marks": {
     "10": 10,
     "5": 9,
@@ -400,7 +401,75 @@
    "units_ready": 5,
    "units_total": 5,
    "words": 13694,
-   "bytes": 146451
+   "bytes": 146468
+  },
+  {
+   "sem": 6,
+   "code": "N-CHN (II) 301",
+   "slug": "s6-n-chn-ii-301",
+   "subject": "Child Health Nursing II",
+   "count": 95,
+   "pyq": 2,
+   "marks": {
+    "15": 18,
+    "5": 36,
+    "2": 41
+   },
+   "units_ready": 3,
+   "units_total": 3,
+   "words": 43281,
+   "bytes": 461814
+  },
+  {
+   "sem": 6,
+   "code": "N-MHN (II) 305",
+   "slug": "s6-n-mhn-ii-305",
+   "subject": "Mental Health Nursing II",
+   "count": 75,
+   "pyq": 15,
+   "marks": {
+    "15": 15,
+    "5": 30,
+    "2": 30
+   },
+   "units_ready": 7,
+   "units_total": 7,
+   "words": 35219,
+   "bytes": 386495
+  },
+  {
+   "sem": 6,
+   "code": "NMLE 330",
+   "slug": "s6-nmle-330",
+   "subject": "Nursing Management and Leadership",
+   "count": 114,
+   "pyq": 0,
+   "marks": {
+    "5": 57,
+    "2": 41,
+    "15": 16
+   },
+   "units_ready": 18,
+   "units_total": 18,
+   "words": 45128,
+   "bytes": 505906
+  },
+  {
+   "sem": 6,
+   "code": "N-MIDW (I)/OBGN 335",
+   "slug": "s6-n-midw-i-obgn-335",
+   "subject": "Midwifery/Obstetrics and Gynaecology (OBG) Nursing I (including SBA module)",
+   "count": 93,
+   "pyq": 0,
+   "marks": {
+    "15": 15,
+    "5": 47,
+    "2": 31
+   },
+   "units_ready": 7,
+   "units_total": 7,
+   "words": 47729,
+   "bytes": 500961
   }
  ]
 }
