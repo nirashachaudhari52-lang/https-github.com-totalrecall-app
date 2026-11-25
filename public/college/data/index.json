@@ -1,15 +1,16 @@
 {
  "generated": "2026-11-19",
- "version": "839a5549ec24",
+ "version": "73fc8ead15c0",
  "totals": {
-  "questions": 2172,
-  "pyq": 478,
-  "subjects": 18,
+  "questions": 2603,
+  "pyq": 544,
+  "subjects": 23,
   "semesters": [
    1,
    2,
    3,
-   4
+   4,
+   5
   ]
  },
  "courses": [
@@ -70,7 +71,7 @@
    "slug": "s1-soci-115",
    "subject": "Applied Sociology",
    "count": 78,
-   "pyq": 21,
+   "pyq": 22,
    "marks": {
     "2": 36,
     "5": 32,
@@ -79,7 +80,7 @@
    "units_ready": 7,
    "units_total": 7,
    "words": 21513,
-   "bytes": 236108
+   "bytes": 236124
   },
   {
    "sem": 1,
@@ -87,7 +88,7 @@
    "slug": "s1-psyc-120",
    "subject": "Applied Psychology",
    "count": 98,
-   "pyq": 21,
+   "pyq": 22,
    "marks": {
     "2": 40,
     "5": 43,
@@ -96,7 +97,7 @@
    "units_ready": 10,
    "units_total": 10,
    "words": 30857,
-   "bytes": 348993
+   "bytes": 349009
   },
   {
    "sem": 1,
@@ -104,7 +105,7 @@
    "slug": "s1-n-nf-i-125",
    "subject": "Nursing Foundation I (including First Aid module)",
    "count": 147,
-   "pyq": 28,
+   "pyq": 30,
    "marks": {
     "2": 62,
     "5": 67,
@@ -112,8 +113,8 @@
    },
    "units_ready": 14,
    "units_total": 14,
-   "words": 52493,
-   "bytes": 560436
+   "words": 52533,
+   "bytes": 560688
   },
   {
    "sem": 2,
@@ -137,7 +138,7 @@
    "slug": "s2-nutr-140",
    "subject": "Applied Nutrition and Dietetics",
    "count": 145,
-   "pyq": 49,
+   "pyq": 50,
    "marks": {
     "10": 14,
     "5": 66,
@@ -146,7 +147,7 @@
    "units_ready": 13,
    "units_total": 13,
    "words": 45503,
-   "bytes": 518001
+   "bytes": 518017
   },
   {
    "sem": 2,
@@ -154,7 +155,7 @@
    "slug": "s2-n-nf-ii-125",
    "subject": "Nursing Foundation II (including Health Assessment module)",
    "count": 185,
-   "pyq": 30,
+   "pyq": 31,
    "marks": {
     "15": 30,
     "5": 81,
@@ -163,7 +164,7 @@
    "units_ready": 16,
    "units_total": 16,
    "words": 74261,
-   "bytes": 799302
+   "bytes": 799318
   },
   {
    "sem": 2,
@@ -197,7 +198,7 @@
    "units_ready": 15,
    "units_total": 15,
    "words": 54202,
-   "bytes": 578580
+   "bytes": 578598
   },
   {
    "sem": 3,
@@ -255,7 +256,7 @@
    "slug": "s4-phar-ii-205",
    "subject": "Pharmacology II (including Fundamentals of Prescribing module)",
    "count": 92,
-   "pyq": 19,
+   "pyq": 20,
    "marks": {
     "10": 20,
     "5": 43,
@@ -264,7 +265,7 @@
    "units_ready": 8,
    "units_total": 8,
    "words": 39366,
-   "bytes": 437662
+   "bytes": 437670
   },
   {
    "sem": 4,
@@ -315,6 +316,91 @@
    "units_total": 3,
    "words": 18365,
    "bytes": 190746
+  },
+  {
+   "sem": 5,
+   "code": "N-CHN (I) 301",
+   "slug": "s5-n-chn-i-301",
+   "subject": "Child Health Nursing I (including ENBC, FBNC, IMNCI and PLS modules)",
+   "count": 109,
+   "pyq": 8,
+   "marks": {
+    "15": 21,
+    "5": 49,
+    "2": 39
+   },
+   "units_ready": 6,
+   "units_total": 6,
+   "words": 54101,
+   "bytes": 540649
+  },
+  {
+   "sem": 5,
+   "code": "N-MHN (I) 305",
+   "slug": "s5-n-mhn-i-305",
+   "subject": "Mental Health Nursing I",
+   "count": 94,
+   "pyq": 6,
+   "marks": {
+    "15": 15,
+    "5": 39,
+    "2": 40
+   },
+   "units_ready": 8,
+   "units_total": 8,
+   "words": 37729,
+   "bytes": 426256
+  },
+  {
+   "sem": 5,
+   "code": "N-COMH (I) 310",
+   "slug": "s5-n-comh-i-310",
+   "subject": "Community Health Nursing I including Environmental Science & Epidemiology",
+   "count": 120,
+   "pyq": 22,
+   "marks": {
+    "15": 22,
+    "5": 48,
+    "2": 50
+   },
+   "units_ready": 11,
+   "units_total": 11,
+   "words": 52957,
+   "bytes": 570643
+  },
+  {
+   "sem": 5,
+   "code": "EDUC 315",
+   "slug": "s5-educ-315",
+   "subject": "Educational Technology / Nursing Education",
+   "count": 78,
+   "pyq": 23,
+   "marks": {
+    "15": 12,
+    "5": 41,
+    "2": 25
+   },
+   "units_ready": 8,
+   "units_total": 8,
+   "words": 32400,
+   "bytes": 359990
+  },
+  {
+   "sem": 5,
+   "code": "N-FORN 320",
+   "slug": "s5-n-forn-320",
+   "subject": "Introduction to Forensic Nursing and Indian Laws",
+   "count": 30,
+   "pyq": 0,
+   "marks": {
+    "10": 10,
+    "5": 9,
+    "2": 11
+   },
+   "units_ready": 5,
+   "units_total": 5,
+   "words": 13694,
+   "bytes": 146451
   }
  ]
 }
