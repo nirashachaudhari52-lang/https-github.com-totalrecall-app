@@ -10,7 +10,7 @@ assistant doing the deployment.
 total-recall-college-site/
 ├── DEPLOY.md            this guide
 ├── README.md            contents table (subjects, question counts)
-├── wrangler.jsonc       Cloudflare Worker config (static assets only, Worker name "total-recall")
+├── wrangler.jsonc       Cloudflare Worker config (static assets only, Worker name "https-github-com-totalrecall-app")
 └── public/              THE WEBSITE – deploy this folder
     ├── index.html       start page: "College students" | "Competitive exams"
     ├── college/
@@ -35,13 +35,13 @@ The site needs **no server code, no database and no environment variables**. All
 
 ## 2. Deployment options (pick ONE)
 
-### Option A – Cloudflare Worker with static assets (recommended; matches the existing Worker "total-recall")
+### Option A – Cloudflare Worker with static assets, from a terminal
 1. Unzip the package and open a terminal in `total-recall-college-site/` (the folder containing `wrangler.jsonc`).
 2. Log in to Cloudflare: `npx wrangler login` (or set `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`).
-   Use the Cloudflare account that owns the Worker **total-recall**.
+   Use the Cloudflare account that owns the Worker named in `wrangler.jsonc`.
 3. Deploy: `npx wrangler deploy`
-   - This replaces the current "Hello world" code of Worker `total-recall` with this site.
-   - To deploy under another name, change `"name"` in `wrangler.jsonc` first.
+   - The Worker name comes from `"name"` in `wrangler.jsonc` (now `https-github-com-totalrecall-app`,
+     the Worker already connected to GitHub). To deploy under another name, change `"name"` first.
 4. Wrangler prints the `*.workers.dev` URL. Optional: Worker → Settings → Domains & Routes → add a
    custom domain or subdomain (for example `study.totalrecallofficial.com`).
 
@@ -52,12 +52,15 @@ The site needs **no server code, no database and no environment variables**. All
 3. Deploy. The site appears at `https://<project-name>.pages.dev`; add a custom domain if wanted.
    (Or from a terminal: `npx wrangler pages deploy public --project-name <project-name>`.)
 
-### Option C – GitHub-connected auto-deploy (already prepared)
-The same site is already committed on branch **`college-site`** of GitHub repo
+### Option C – GitHub-connected auto-deploy (in use)
+The same site is committed on branch **`college-site`** of GitHub repo
 **nirashachaudhari52-lang/https-github.com-totalrecall-app** (root contains `wrangler.jsonc` and `public/`).
-Cloudflare dashboard → Workers & Pages → **total-recall** → Settings → **Build** → Connect → GitHub →
-that repo → production branch **`college-site`**, root directory `/`, build command empty,
-deploy command `npx wrangler deploy`. Every later push to `college-site` then deploys automatically.
+This repository is connected in Workers Builds to the Worker **`https-github-com-totalrecall-app`**
+(production branch **`college-site`**, root directory `/`, build command empty, deploy command
+`npx wrangler deploy`). Every push to `college-site` deploys automatically.
+**Important:** Workers Builds only deploys when `"name"` in `wrangler.jsonc` is exactly the name of the
+connected Worker. If you connect the repository to a different Worker (for example `total-recall`),
+change `"name"` to that Worker's name, or every build fails.
 
 ### Option D – Add it inside the main Total Recall app (if you have the app's code)
 1. Copy `public/college/` into the app's public/static folder so that it is served at **`/college/`**

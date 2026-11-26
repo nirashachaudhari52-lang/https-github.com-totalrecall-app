@@ -1,7 +1,8 @@
 {
-  // Cloudflare Worker "total-recall": static site only (start page + B.Sc college question bank).
+  // Cloudflare Worker "https-github-com-totalrecall-app" (the Worker connected to this repository in Workers Builds):
+  // static site only (start page + B.Sc college question bank). The name must match the connected Worker, or the build fails.
   // Deployed by Cloudflare Workers Builds on every push to the college-site branch.
-  "name": "total-recall",
+  "name": "https-github-com-totalrecall-app",
   "compatibility_date": "2025-11-01",
   "assets": {
     "directory": "./public",
