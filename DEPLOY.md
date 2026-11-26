@@ -1,4 +1,4 @@
-# Deploy guide – Total Recall start page + B.Sc Nursing college question bank (Semesters I–VI)
+# Deploy guide – Total Recall start page + B.Sc Nursing college question bank (Semesters I–VII)
 
 This package is a **finished static website**. Nothing needs to be built, installed or generated –
 deploy the `public/` folder as it is. These instructions are written for the person or Claude
@@ -26,9 +26,9 @@ total-recall-college-site/
 - **College question bank (`/college/`)** – B.Sc Nursing, INC 2021 syllabus, university-style
   descriptive answers (2, 5, 10, 15 marks), previous-year questions (PYQ) marked. Each subject's JSON
   is loaded only when a student opens that subject, so the page stays light on mobile data.
-- **Content in this package:** Semesters I, II, III, IV, V and VI complete – 27 subjects, 2,981 questions
-  (570 previous-year). Semester VII follows later as a new package (or a push to the `college-site`
-  branch); subjects that are not ready yet are simply not listed. See `README.md` for exact counts.
+- **Content in this package:** Semesters I to VII complete (all theory semesters; Semester VIII is the
+  internship) – 30 subjects, 3,246 questions (589 previous-year). Diagrams follow later as an update
+  (a new package or a push to the `college-site` branch). See `README.md` for exact counts.
 
 The site needs **no server code, no database and no environment variables**. All paths are absolute
 (`/college/…`), so `public/` must be served at the root of a domain or subdomain.
@@ -71,8 +71,8 @@ deploy command `npx wrangler deploy`. Every later push to `college-site` then de
 
 ## 3. Check after deploying
 1. `/` shows the two cards; the college card shows the question count (read from `/college/data/index.json`).
-2. `/college/` loads; tap Sem 1 → Sem 6 and several subjects – questions appear; tap a question to open the answer.
-3. Deep link works: `/college/#s4-n-ahn-ii-225/S4-NAHNII225-U06-001` opens Adult Health Nursing II, Unit 6, first question; `/college/#s5-n-comh-i-310` opens Community Health Nursing I; `/college/#s6-n-midw-i-obgn-335` opens Midwifery/OBG Nursing I.
+2. `/college/` loads; tap Sem 1 → Sem 7 and several subjects – questions appear; tap a question to open the answer.
+3. Deep link works: `/college/#s4-n-ahn-ii-225/S4-NAHNII225-U06-001` opens Adult Health Nursing II, Unit 6, first question; `/college/#s5-n-comh-i-310` opens Community Health Nursing I; `/college/#s6-n-midw-i-obgn-335` opens Midwifery/OBG Nursing I; `/college/#s7-n-comh-ii-401/S7-NCOMHII401-U01-001` opens the first Community Health Nursing II question.
 4. *Competitive exams* opens https://totalrecallofficial.com (or the route you set).
 5. An unknown address (e.g. `/xyz`) shows the "Page not found" page.
 

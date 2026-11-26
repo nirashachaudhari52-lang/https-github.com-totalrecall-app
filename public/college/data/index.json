@@ -1,17 +1,18 @@
 {
- "generated": "2026-11-25",
- "version": "19db2a61dd38",
+ "generated": "2026-11-26",
+ "version": "8c87312058b8",
  "totals": {
-  "questions": 2981,
-  "pyq": 570,
-  "subjects": 27,
+  "questions": 3246,
+  "pyq": 589,
+  "subjects": 30,
   "semesters": [
    1,
    2,
    3,
    4,
    5,
-   6
+   6,
+   7
   ]
  },
  "courses": [
@@ -173,7 +174,7 @@
    "slug": "s2-hnit-145",
    "subject": "Health/Nursing Informatics and Technology",
    "count": 94,
-   "pyq": 0,
+   "pyq": 1,
    "marks": {
     "10": 18,
     "5": 31,
@@ -182,7 +183,7 @@
    "units_ready": 10,
    "units_total": 10,
    "words": 28422,
-   "bytes": 316760
+   "bytes": 316778
   },
   {
    "sem": 3,
@@ -207,7 +208,7 @@
    "slug": "s3-phar-i-205",
    "subject": "Pharmacology I",
    "count": 70,
-   "pyq": 23,
+   "pyq": 24,
    "marks": {
     "10": 19,
     "5": 32,
@@ -216,7 +217,7 @@
    "units_ready": 8,
    "units_total": 8,
    "words": 30108,
-   "bytes": 341679
+   "bytes": 341697
   },
   {
    "sem": 3,
@@ -266,7 +267,7 @@
    "units_ready": 8,
    "units_total": 8,
    "words": 39366,
-   "bytes": 437689
+   "bytes": 437709
   },
   {
    "sem": 4,
@@ -358,7 +359,7 @@
    "slug": "s5-n-comh-i-310",
    "subject": "Community Health Nursing I including Environmental Science & Epidemiology",
    "count": 120,
-   "pyq": 22,
+   "pyq": 25,
    "marks": {
     "15": 22,
     "5": 48,
@@ -367,7 +368,7 @@
    "units_ready": 11,
    "units_total": 11,
    "words": 52957,
-   "bytes": 570643
+   "bytes": 570697
   },
   {
    "sem": 5,
@@ -460,7 +461,7 @@
    "slug": "s6-n-midw-i-obgn-335",
    "subject": "Midwifery/Obstetrics and Gynaecology (OBG) Nursing I (including SBA module)",
    "count": 93,
-   "pyq": 0,
+   "pyq": 1,
    "marks": {
     "15": 15,
     "5": 47,
@@ -469,7 +470,58 @@
    "units_ready": 7,
    "units_total": 7,
    "words": 47729,
-   "bytes": 500961
+   "bytes": 500979
+  },
+  {
+   "sem": 7,
+   "code": "N-COMH (II) 401",
+   "slug": "s7-n-comh-ii-401",
+   "subject": "Community Health Nursing II",
+   "count": 107,
+   "pyq": 12,
+   "marks": {
+    "15": 16,
+    "5": 49,
+    "2": 42
+   },
+   "units_ready": 13,
+   "units_total": 13,
+   "words": 40747,
+   "bytes": 426665
+  },
+  {
+   "sem": 7,
+   "code": "NRST 405",
+   "slug": "s7-nrst-405",
+   "subject": "Nursing Research and Statistics",
+   "count": 66,
+   "pyq": 1,
+   "marks": {
+    "15": 10,
+    "5": 23,
+    "2": 33
+   },
+   "units_ready": 8,
+   "units_total": 8,
+   "words": 23441,
+   "bytes": 263643
+  },
+  {
+   "sem": 7,
+   "code": "N-MIDW (II)/OBGN 410",
+   "slug": "s7-n-midw-ii-obgn-410",
+   "subject": "Midwifery/Obstetrics and Gynaecology (OBG) Nursing II (including Safe Delivery App module)",
+   "count": 92,
+   "pyq": 0,
+   "marks": {
+    "15": 21,
+    "5": 41,
+    "2": 30
+   },
+   "units_ready": 5,
+   "units_total": 5,
+   "words": 45960,
+   "bytes": 528300
   }
  ]
 }
