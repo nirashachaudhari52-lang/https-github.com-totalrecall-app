@@ -1,6 +1,7 @@
 # Total Recall – start page and B.Sc Nursing college question bank
 
-This branch (`college-site`) is a static website deployed to the Cloudflare Worker **total-recall**.
+This branch (`college-site`) is a static website served at **https://college.totalrecallofficial.com**
+(Cloudflare Worker **https-github-com-totalrecall-app**).
 
 - `/` – start page: **College students** → B.Sc Nursing question bank; **Competitive exams** → https://totalrecallofficial.com
 - `/college/` – B.Sc Nursing (INC 2021) semester-wise question bank with 2, 5, 10 and 15-mark answers;
@@ -8,9 +9,12 @@ This branch (`college-site`) is a static website deployed to the Cloudflare Work
 
 ## Deployment (Cloudflare Workers Builds)
 
-Worker **total-recall** → Settings → Build → Git repository: this repo, production branch **college-site**,
-root directory `/`, deploy command `npx wrangler deploy` (no build command needed). Every push to this
-branch deploys automatically. `wrangler.jsonc` serves `./public` as static assets.
+Worker **https-github-com-totalrecall-app** → Settings → Builds: Git repository this repo,
+**production branch `college-site`**, root directory `/`, no build command, deploy command `npx wrangler deploy`.
+Every push to this branch deploys automatically. Pushes to any other branch run the preview command
+(`npx wrangler preview`) and do not deploy. `wrangler.jsonc` serves `./public` as static assets; its `"name"`
+must stay the Worker's name. Custom domain: `college.totalrecallofficial.com` (Worker → Domains); the
+workers.dev address is switched off.
 
 ## Contents (2026-11-26, data version 8c87312058b8)
 
