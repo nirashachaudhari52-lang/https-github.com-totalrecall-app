@@ -4,6 +4,10 @@
   // Deployed by Cloudflare Workers Builds on every push to the college-site branch.
   "name": "https-github-com-totalrecall-app",
   "compatibility_date": "2025-11-01",
+  // Students use the custom domain college.totalrecallofficial.com (Worker → Domains in the dashboard).
+  // Keep the workers.dev address off: its name looks like a github.com address and Chrome shows a safety warning on it.
+  "workers_dev": false,
+  "preview_urls": false,
   "assets": {
     "directory": "./public",
     "html_handling": "auto-trailing-slash",
