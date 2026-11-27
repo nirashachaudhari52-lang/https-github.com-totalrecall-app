@@ -3,6 +3,9 @@
   // static site only (start page + B.Sc college question bank). The name must match the connected Worker, or the build fails.
   // Deployed by Cloudflare Workers Builds on every push to the college-site branch.
   "name": "https-github-com-totalrecall-app",
+  // src/worker.js: /bsc/data/* = /college/data/* (used by the app's B.Sc page via a Workers Route on
+  // totalrecallofficial.com), and /college/ shows the app's own B.Sc page so the design matches the app.
+  "main": "src/worker.js",
   "compatibility_date": "2025-11-01",
   // Students use the custom domain college.totalrecallofficial.com (Worker → Domains in the dashboard).
   // Keep the workers.dev address off: its name looks like a github.com address and Chrome shows a safety warning on it.
@@ -10,6 +13,9 @@
   "preview_urls": false,
   "assets": {
     "directory": "./public",
+    "binding": "ASSETS",
+    // Only these paths run the Worker; everything else is served straight from ./public
+    "run_worker_first": ["/bsc", "/bsc/*", "/college/", "/college/index.html"],
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "404-page"
   }

@@ -4,13 +4,28 @@ This package is a **finished static website**. Nothing needs to be built, instal
 deploy the `public/` folder as it is. These instructions are written for the person or Claude
 assistant doing the deployment.
 
+## Live setup (since 27 Nov 2026)
+
+- **One question bank for the app and the college site.** Both show the data in `public/college/data/`
+  on branch `college-site`. Push new data there and both update in about 2 minutes.
+- **Total Recall app** – https://totalrecallofficial.com/bsc/ is the app's own B.Sc page (it lives in the
+  app's repository). A Workers Route on the `totalrecallofficial.com` zone sends
+  `*totalrecallofficial.com/bsc/data/*` to this Worker, which answers `/bsc/data/<file>` with
+  `public/college/data/<file>` (`src/worker.js`).
+- **College site** – https://college.totalrecallofficial.com: `/` is the start page; `/college/` shows the
+  app's B.Sc page (fetched from https://totalrecall-app.pages.dev/bsc/, cached 5 minutes), so the questions
+  look exactly like the app. `public/college/index.html` is only a fallback if the app page can't be fetched.
+- The question page design therefore lives in the app's repository. If the data format changes (new fields
+  such as diagrams), the app's `/bsc/` page has to be updated to show them.
+
 ## 1. What is inside
 
 ```
 total-recall-college-site/
 ├── DEPLOY.md            this guide
 ├── README.md            contents table (subjects, question counts)
-├── wrangler.jsonc       Cloudflare Worker config (static assets only, Worker name "https-github-com-totalrecall-app")
+├── wrangler.jsonc       Cloudflare Worker config (Worker name "https-github-com-totalrecall-app")
+├── src/worker.js        /bsc/data/* = /college/data/*; /college/ shows the app's B.Sc page
 └── public/              THE WEBSITE – deploy this folder
     ├── index.html       start page: "College students" | "Competitive exams"
     ├── college/
@@ -30,8 +45,8 @@ total-recall-college-site/
   internship) – 30 subjects, 3,246 questions (589 previous-year). Diagrams follow later as an update
   (a new package or a push to the `college-site` branch). See `README.md` for exact counts.
 
-The site needs **no server code, no database and no environment variables**. All paths are absolute
-(`/college/…`), so `public/` must be served at the root of a domain or subdomain.
+Apart from the small `src/worker.js`, the site needs **no server code, no database and no environment
+variables**. All paths are absolute (`/college/…`), so `public/` must be served at the root of a domain or subdomain.
 
 ## 2. Deployment options (pick ONE)
 
@@ -74,14 +89,15 @@ change `"name"` to that Worker's name, or every build fails.
 
 ## 3. Check after deploying
 1. `/` shows the two cards; the college card shows the question count (read from `/college/data/index.json`).
-2. `/college/` loads; tap Sem 1 → Sem 7 and several subjects – questions appear; tap a question to open the answer.
-3. Deep link works: `/college/#s4-n-ahn-ii-225/S4-NAHNII225-U06-001` opens Adult Health Nursing II, Unit 6, first question; `/college/#s5-n-comh-i-310` opens Community Health Nursing I; `/college/#s6-n-midw-i-obgn-335` opens Midwifery/OBG Nursing I; `/college/#s7-n-comh-ii-401/S7-NCOMHII401-U01-001` opens the first Community Health Nursing II question.
-4. *Competitive exams* opens https://totalrecallofficial.com (or the route you set).
-5. An unknown address (e.g. `/xyz`) shows the "Page not found" page.
+2. `/college/` loads in the app's design; tap Sem 1 → Sem 7 and several subjects – questions appear; tap a question to open the answer.
+3. Semester link works: `/college/#sem7` opens Semester 7.
+4. https://totalrecallofficial.com/bsc/ (the app) shows the same semesters and question counts.
+5. *Competitive exams* opens https://totalrecallofficial.com (or the route you set).
+6. An unknown address (e.g. `/xyz`) shows the "Page not found" page.
 
 ## 4. Updating later
-New semesters arrive as a new package (or a push to the `college-site` branch). To update, replace
-`public/college/data/` (and `public/college/index.html` if it changed) and deploy again. Do not edit
+New semesters arrive as a push to the `college-site` branch: replace `public/college/data/` and push.
+The app and the college site both pick it up. Do not edit
 the JSON by hand – it is generated from the question-bank sources. `index.json` carries a `version`
 string that the page uses to fetch fresh data.
 

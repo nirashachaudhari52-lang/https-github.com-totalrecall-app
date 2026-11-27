@@ -1,20 +1,23 @@
 # Total Recall – start page and B.Sc Nursing college question bank
 
-This branch (`college-site`) is a static website served at **https://college.totalrecallofficial.com**
-(Cloudflare Worker **https-github-com-totalrecall-app**).
+This branch (`college-site`) holds the B.Sc Nursing (INC 2021) question bank – 2, 5, 10 and 15-mark
+answers, previous-year questions (PYQ) marked – for both the Total Recall app and the college site
+(Cloudflare Worker **https-github-com-totalrecall-app**, see `DEPLOY.md` → *Live setup*):
 
-- `/` – start page: **College students** → B.Sc Nursing question bank; **Competitive exams** → https://totalrecallofficial.com
-- `/college/` – B.Sc Nursing (INC 2021) semester-wise question bank with 2, 5, 10 and 15-mark answers;
-  previous-year questions (PYQ) are marked. Each subject loads from `public/college/data/<subject>.json`.
+- **App:** https://totalrecallofficial.com/bsc/ loads its questions from `/bsc/data/`, which a Workers Route
+  sends to this Worker (`src/worker.js` answers it with `public/college/data/`).
+- **College site:** https://college.totalrecallofficial.com – `/` start page (**College students** → question
+  bank; **Competitive exams** → https://totalrecallofficial.com); `/college/` shows the app's own B.Sc page,
+  so the questions look the same as in the app. Each subject loads from `public/college/data/<subject>.json`.
 
 ## Deployment (Cloudflare Workers Builds)
 
 Worker **https-github-com-totalrecall-app** → Settings → Builds: Git repository this repo,
 **production branch `college-site`**, root directory `/`, no build command, deploy command `npx wrangler deploy`.
 Every push to this branch deploys automatically. Pushes to any other branch run the preview command
-(`npx wrangler preview`) and do not deploy. `wrangler.jsonc` serves `./public` as static assets; its `"name"`
-must stay the Worker's name. Custom domain: `college.totalrecallofficial.com` (Worker → Domains); the
-workers.dev address is switched off.
+(`npx wrangler preview`) and do not deploy. `wrangler.jsonc` serves `./public` as static assets plus
+`src/worker.js`; its `"name"` must stay the Worker's name. Custom domain: `college.totalrecallofficial.com`
+and route `*totalrecallofficial.com/bsc/data/*` (Worker → Domains); the workers.dev address is switched off.
 
 ## Contents (2026-11-26, data version 8c87312058b8)
 
